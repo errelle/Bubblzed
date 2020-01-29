@@ -6,6 +6,10 @@ var loup = document.getElementById("loup");
 var score = document.getElementById("score");
 var gain = document.getElementById("gain");
 
+var images = [];
+images[1] = {cursor : url("images/zombiefinger.png")};
+images[2] = "assets/shared/cursors/drum3.png";
+
 var clique = 0; 
 var compteur = 1; 
 var fric= 0;
@@ -19,8 +23,7 @@ function ajoute() {
 	jeu;
 	clique = clique+compteur;
 	score.innerHTML = clique;
-	jeu = getRndInteger(0,10);
-	
+	jeu = getRndInteger(0,10);	
 }
 
 function getRndInteger(min, max) {
@@ -28,10 +31,8 @@ function getRndInteger(min, max) {
    gain.innerHTML = fric;
 }
 
-
 function incrementer() {
-	
-		if (fric>=prix) {
+			if (fric>=prix) {
 			fric=fric-prix;
 			prix=prix*2;
 			gain.innerHTML = fric;
@@ -40,9 +41,21 @@ function incrementer() {
 		else {
 			alert("Arrete de buller et clique! Il faut atteindre "+prix+" plumes pour debloquer ce bonus ;-)");
 		}
-	
+		document.getElementById("b1") = images[1];
+	/*	document.getElementById("b2").style.cursor = "wait";
+		document.getElementById("b3").style.cursor = "wait";
+		document.getElementById("b4").style.cursor = "wait";
+		document.getElementById("b5").style.cursor = "wait";
+		document.getElementById("b6").style.cursor = "wait";
+		document.getElementById("b7").style.cursor = "wait";
+		document.getElementById("b8").style.cursor = "wait";
+		document.getElementById("b9").style.cursor = "wait";
+		document.getElementById("b10").style.cursor = "wait";
+		document.getElementById("b11").style.cursor = "wait";
+		document.getElementById("b12").style.cursor = "wait";
+		document.getElementById("b13").style.cursor = "wait";
+		document.getElementById("b14").style.cursor = "wait";*/
 }
-
 
 function indianaJones() { 
 	if (fric>=prix2) {
@@ -58,9 +71,7 @@ function indianaJones() {
 	
 }
 	
-
 function coup2Boule() { 
-
 	if (fric>=prix3) {
 			fric=fric-prix3;
 			prix3=prix3*2;
@@ -78,7 +89,6 @@ function coup2Boule() {
 function fluck() {
 			fric++;
 			document.getElementById("gain").innerHTML = fric;
-
 }
 
 function boost() {
