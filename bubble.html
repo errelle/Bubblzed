@@ -4,55 +4,62 @@
 		<meta author="GirlsPower">
     	<meta charset="UTF-8">
     	<link rel="stylesheet" type="text/css" href="bubble.css">
-    	<title>Bubblzed</title>	
+    	<title>Bubblzed</title>
 	</head>
 	<body>
-
+<!--container général-->
 <div class=container>
    <div class=text>
 
     <h1> Bubblz'ed</h1>
     <h3>Le jeu qui t'empêche de buller !</h3>
+<!--audio-->
+		<div class="mp3">
+		<audio id="audioPlayer">
+			<source src="mp3/Creo-Showdown.mp3">
+		</audio>
+		<button class="control" onclick="play('audioPlayer', this)">Play me</button>
+	</div>
+<!--affichage score-->
     <div id="score" value="">0</div>
     <div id="gain" value="">0</div>
    </div>
-
+<!--contenant bulles-->
     <div class=box>
 
-    <div id="jeu"> 
+    <div id="jeu">
       <div class="bulles">
          <input type="image" name="" id="b1" src="images/bubble.png" onclick="ajoute()" ></input>
          <input type="image" name="" id="b2" src="images/bubble.png" onclick="ajoute()"></input>
          <input type="image" name="" id="b3" src="images/bubble.png" onclick="ajoute()"></input>
          <input type="image" name="" id="b12" src="images/bubble.png" onclick="ajoute()"></input>
-         <input type="image" name="" id="b14" src="images/bubble.png" onclick="ajoute()"></input> 
+         <input type="image" name="" id="b14" src="images/bubble.png" onclick="ajoute()"></input>
       </div>
       <div class="bulles" >
          <input type="image" name="" id="b4" src="images/bubble.png"onclick="ajoute()"></input>
          <input type="image" name="" id="b5" src="images/bubble.png"onclick="ajoute()"></input>
-         <input type="image" name="" id="b6" src="images/bubble.png"onclick="ajoute()"></input>    
-         <input type="image" name="" id="b7" src="images/bubble.png"onclick="ajoute()"></input>                 
+         <input type="image" name="" id="b6" src="images/bubble.png"onclick="ajoute()"></input>
+         <input type="image" name="" id="b7" src="images/bubble.png"onclick="ajoute()"></input>
       </div>
       <div class="bulles" >
          <input type="image" name="" id="b8" src="images/bubble.png"onclick="ajoute()"></input>
          <input type="image" name="" id="b9" src="images/bubble.png"onclick="ajoute()"></input>
          <input type="image" name="" id="b10" src="images/bubble.png"onclick="ajoute()"></input>
          <input type="image" name="" id="b11" src="images/bubble.png"onclick="ajoute()"></input>
-         <input type="image" name="" id="b13" src="images/bubble.png"onclick="ajoute()"></input>  
-      </div>  
-   </div>  
-
+         <input type="image" name="" id="b13" src="images/bubble.png"onclick="ajoute()"></input>
+      </div>
+   </div>
+<!--contenant image options-->
       <div class="equipement">
-         <input type="image"  id="doigt" onclick="incrementer()" value="" src="images/zombiefinger.png"></input>  
+         <input type="image"  id="doigt" onclick="incrementer()" value="" src="images/zombiefinger.png"></input>
          <input type="image"  id="fouet" onclick="indianaJones()" value="" src="images/fouet.gif"></input>
          <input type="image"  id="zidane" onclick="coup2Boule()" value="" src="images/zidane.gif"></input>
          <input type="image"  id="loup" onclick="boost()" value="" src="images/loup.gif"></input>
       </div>
 </div>
-</div>              
-
-<script type="text/javascript" src="bubble.js"></script> 
+</div>
+<!--script jeu cookie cliker et bonus-->
+<script type="text/javascript" src="bubble.js"></script>
 
    </body>
-
 </html>

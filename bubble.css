@@ -1,35 +1,44 @@
-/*background-image : url 'https://trello-attachments.s3.amazonaws.com/5d0c83e378888638cdaaf05e/5d0c87ff8daf2157b0288de5/bf6f2ee3d040bcc699cd43fccaeb368b/Zidane_deathstar.gif';
-
-					url https://rivierapaysdenhaut.eerv.ch/wp-content/uploads/sites/274/2019/05/bulles-de-savon.jpg
-*/
+/*A REGLER : pb affichage*/
 
 body{
 	background-image : url("images/cerisier.jpg");
 	background-size: 100%;
-	background-repeat: no-repeat;	
+	background-repeat: no-repeat;
 }
 
+/*contenant général*/
 .container {
 	padding: auto;
 	margin: auto;
 }
+
+/*contenant bulles + img*/
 .box {
 	display:flex;
 	flex-direction: row-reverse;
 	align-content: stretch;
 }
 
+/*position mp3*/
+.mp3 {
+	display:flex;
+	justify-content: flex-end;
+	align-self: auto;
+}
+
+/*contenant bulles*/
 #jeu {
 	height: 40%;
 	width: 80%;
 }
 
+/*dimensions options*/
 .equipement {
 	height:30%;
 	width :20%;
 }
 
-
+/*disposition et taille bulles*/
 .bulles{
 	display:flex;
 	justify-content: center;
@@ -49,17 +58,39 @@ body{
 	width :15%;
 }
 
+#b1, #b2, #b4, #b7, #b10, #b11, #b14,#b5, #b12, #b8, #b9, #b6, #b13, #b3 {
+	outline : none;
+}
+
+/*essai modif curseur
+#jeu
+{
+cursor:url(images/zombiefinger.png), auto;
+}*/
+
+/*disposition et taille option*/
 #doigt, #fouet, #zidane, #loup {
 	display: flex;
 	justify-content: flex-start;
 	outline : none;
 }
 
-#b1, #b2, #b4, #b7, #b10, #b11, #b14,#b5, #b12, #b8, #b9, #b6, #b13, #b3 {
-	outline : none;
+#doigt{
+	width: 50%;
+	height: 50%;
 }
-
-.jeu
-{
-cursor:url(images/zombiefinger.png), auto;
+#fouet{
+	width: 50%;
+	height: 50%;
 }
+#zidane{
+	width: 110%;
+	height: 110%;
+}
+#loup{
+	width: 110%;
+	height: 110%;
+}
+/*background-image : url 'https://trello-attachments.s3.amazonaws.com/5d0c83e378888638cdaaf05e/5d0c87ff8daf2157b0288de5/bf6f2ee3d040bcc699cd43fccaeb368b/Zidane_deathstar.gif';
+		url https://rivierapaysdenhaut.eerv.ch/wp-content/uploads/sites/274/2019/05/bulles-de-savon.jpg
+*/
